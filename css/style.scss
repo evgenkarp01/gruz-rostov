@@ -1,0 +1,91 @@
+@import "base/variables";
+@import "base/mixins";
+@import "base/typography";
+@import "vendor/normalize";
+@import "base/manifest";
+@import "components/sprite";
+
+h1, h2, h3, h4, p {
+    padding: 0;
+    margin: 0;
+}
+code {
+	background: #d3dddd;
+	padding: 5px;
+	margin-right: 5px;
+}
+body {
+    font-family: "Lato", Arial, sans-serif;
+    width: 100%;
+    height: 100%;
+    line-height: rem(20);
+    font-size: rem(16);
+}
+
+.ttl{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    h1{
+        font-size: rem(32);
+        font-weight: bold;
+        font-family: $RCN, Areal, sans-serif;
+    }
+    h2{
+        font-size: rem(30);
+        font-weight: bold;
+    }
+    h3{
+        font-size: rem(20);
+        font-weight: bold;
+    }
+    h4{
+        font-size: rem(18);
+        font-weight: 600;
+    }
+    h5{
+        font-size: rem(16);
+        font-weight: 600;
+    }
+    h6{
+        font-size: rem(14);
+        font-weight: 600;
+    }
+}
+.btn{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    button{
+        cursor: pointer;
+        font-size: rem(16);
+        font-weight: 600;
+        min-width: 173px;
+        height: 40px;
+        box-shadow: 0 4px 0 #2e9564;
+        border-radius: 8px;
+        border: none;
+        padding: 0 30px;
+        @include trans(0.05);
+        background-image: linear-gradient(180deg,
+         rgba(109, 234, 174, 1) 0%, 
+         rgba(117, 237, 180, 1) 51%, 
+         rgba(42, 180, 114, 1) 100%);
+        outline: none;
+        &:hover{
+             background-image: linear-gradient(180deg,
+             rgba(79, 224,155, 1) 0%, 
+             rgba(117, 237, 180, 1) 51%, 
+             rgba(42, 180, 114, 1) 100%);
+             box-shadow: 0 2px 0 #3ca774;
+        }
+        &:active {
+            box-shadow: 0 -2px 0 #2e9564;
+            background-image: linear-gradient(180deg,
+            rgba(42, 180, 114, 1) 0%, 
+            rgba(109, 234, 174, 1) 51%, 
+             rgba(42, 180, 114, 1)   100%);
+
+        }
+    }
+}
