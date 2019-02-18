@@ -1,26 +1,30 @@
-$bg-color:#b4eaff;
+$bg-color:#ffc770;
 $link-color: #00b;
 $wt:#fff;
 $bk:#000;
 $dark:#ededed;
-$accent-color: #58e0d9;
+$accent-color: #e76e37;
 $focus-color: $accent-color;
 $fz: rem(16);
-$h2-fz:rem(30);
+$h2-fz:rem(22);
 $h3-fz:rem(20);
-$btn-color: #cb1436;
+$btn-color: #ff6563;
 $placeholder-color: #767676;
 $browser-context: 16; // Default
 $dir:'../fonts/';
 
-$Lbk: 'Lato-Black';
-$Lb: 'Lato-Bold';
-$Lm: 'Lato-Medium';
-$L: 'Lato-Regular';
-$RCb: 'RobotoCondensed-Bold';
-$LN: 'Lato';
-$RCN: 'Roboto Condensed';
+$Mb: 'MuseoCyrl-bold';
+$DCm: 'PFDinCondensedMedium';
+$PNb: 'ProximaNova-Bold';
+$PN: 'ProximaNova-Regular';
+$PNi: 'ProximaNova-RegularIt';
+$PNs: 'ProximaNova-Semibold';
 
+$MN: 'Museo';
+$DN: 'Din Condensed';
+$PNm: 'Proxima Nova';
+$font-text: $PNm;
+    
 $normal: normal;
 $italic: italic;
 $bold: 700;
@@ -29,5 +33,5 @@ $medium: 500;
 $heavy: 800;
 $black: 900;
 $light: 300;
-$mt:80px;
+$mt:100px;
 $mb:60px;

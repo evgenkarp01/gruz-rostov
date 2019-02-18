@@ -89,6 +89,9 @@ input:focus, textarea:focus{
 .mt-ttl{
     margin-top: $mt;
 }
+.col-pol{
+    width: 50%;
+}
 //////////////////SLICK DOTS
 .slick-dots li button{
   width: 20px;
@@ -109,5 +112,4 @@ input:focus, textarea:focus{
 }
 .slick-dots{
   padding-top: 40px;
-  background: #f6f6f6;
 }
