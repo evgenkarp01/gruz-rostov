@@ -69,18 +69,12 @@ body {
         background-color: $btn-color;
         outline: none;
         &:hover{
-             background-image: linear-gradient(180deg,
-             rgba(79, 224,155, 1) 0%, 
-             rgba(117, 237, 180, 1) 51%, 
-             rgba(42, 180, 114, 1) 100%);
-             box-shadow: 0 2px 0 #3ca774;
+             background-image: #e55e5e;
+             box-shadow: 0 2px 0 #c96464;
         }
         &:active {
-            box-shadow: 0 -2px 0 #2e9564;
-            background-image: linear-gradient(180deg,
-            rgba(42, 180, 114, 1) 0%, 
-            rgba(109, 234, 174, 1) 51%, 
-             rgba(42, 180, 114, 1)   100%);
+            box-shadow: 0 -2px 0 #a55151;
+            background-image: #c45c5c;
 
         }
     }
@@ -92,7 +86,7 @@ header{
     right: 0;
     min-height: 65px;
     background-color: $bg-color;
-    z-index: 5;
+    z-index: 6;
     .flex-header{
        
     
@@ -110,8 +104,10 @@ header{
         }
     }
     .call-out{
+        z-index: 5;
         ul{
             li{
+                cursor: pointer;
                 margin-left: 15px;
                 list-style:none;
                 @include trans(0.4);
@@ -122,7 +118,53 @@ header{
         }
     }
 }
-
+#fig-two{
+    position: absolute;
+    right: 0;
+    top: 25px;
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+    background-color: rgba(255,199,112,0.2);
+}
+#fig-one{
+    position: absolute;
+    left: 0;
+    bottom: -63px;
+    width: 320px;
+    height: 320px;
+    border-radius: 10px;
+    background-color: rgba(231,110,55,0.2);
+}
+#fig-three{
+    position: absolute;
+    right: 0px;
+    bottom: -60px;
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    background-color: rgba(231,110,55,0.1);
+}
+#fig-four{
+    position: absolute;
+    bottom:20px;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-top: 170px solid transparent;
+    border-left: 250px solid  rgba(255,199,112,0.2);
+    border-bottom: 170px solid transparent;
+}
+#fig-five{
+    position: absolute;
+    right: 50px;
+    bottom: 0px;
+    border-bottom: 100px solid rgba(231,110,55,0.2);
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    height: 0;
+    width: 200px;
+}
 section{
     &.banner{
         margin-top: 76px;
@@ -178,6 +220,7 @@ section{
         }
     }
     &.price-services{
+        position: relative;
         .flex-price-services{
             align-items: baseline;
         }
@@ -212,7 +255,7 @@ section{
             }
         }
     }
-    &.services{
+    .services{
         ul{
             list-style: none;
             margin-left: 90px;
@@ -236,10 +279,10 @@ section{
     &.gallery{
         .gallery-slick{
             text-align: center;
-            padding-left: 10px;
             .item{
                 img{
-                    width: 335px;
+                    max-width: 335px;
+                    width: 100%;
                     height: 255px;
                     object-fit: cover;
                 }
@@ -247,6 +290,7 @@ section{
         }
     }
     &.uslugi-review{
+        position: relative;
         .flex-uslugi-review{
             align-items: baseline;
         }
@@ -314,6 +358,7 @@ section{
         background-color: #ffefd5;
         padding-top: 60px;
         padding-bottom: 115px;
+        position: relative;
         .oplet{
             justify-content: space-around;
         }
@@ -393,8 +438,90 @@ footer{
 
 
 
+.over{
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 0;
+    @include trans(0.6);
+}
+.menuha{
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    left: 2000px;
+    bottom: 0;
+    background:$accent-color;
+    padding: 0 20px;
+    @include trans(0.6);
+    .mmenu{
+        max-width: 600px;
+        margin: 60px auto;
+        position: relative;
+        padding: 0;
+        li{
+            text-align: center;
+            list-style: none;
+            padding: 6px 0;
+            border-bottom: 1px solid $bg-color;
+            a{
+                color: $wt;
+                font-size: rem(22);
+                font-weight: 600;
+                text-decoration: none;
+            }
+            &:last-child{
+                border-bottom: none;
+            }
+        }
+    }
+    #btn-no-menu{
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        top: 20px;
+        right: 20px;
+        border-radius: 100%;
+        border: 2px solid $wt;
+        cursor: pointer;
+        @include trans(0.4);
+        &:after{
+            position: absolute;
+            top: 19px;
+            right: 3px;
+            content:"";
+            width: 35px;
+            height: 2px;
+            background:$wt;
+            transform: rotate(45deg);
+        }
+        &:before{
+            position: absolute;
+            top: 19px;
+            right: 3px;
+            content:"";
+            width: 35px;
+            height: 2px;
+            background:$wt;
+            transform: rotate(-45deg);
+        }
+        &:hover{
+            border:2px solid $btn-color;
+            background:$bg-color;
+        }
 
-
+    }
+}
+.menuha-left{
+    left: 0 !important;
+}
+.zet{
+    height: 100vh;
+}
 
 
 
@@ -450,12 +577,122 @@ footer{
 
 
 
+.image-source-link {
+    color: $btn-color;
+}
+
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+    opacity: 0;
+    -webkit-backface-visibility: hidden;
+    /* ideally, transition speed should match zoom duration */
+    -webkit-transition: all 0.3s ease-out; 
+    -moz-transition: all 0.3s ease-out; 
+    -o-transition: all 0.3s ease-out; 
+    transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+        opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+        opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+    opacity: 0;
+}
+
+
+.window-modal{
+    max-width: 550px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    min-height: 300px;
+    border-radius: 8px;
+    padding: 30px 25px;
+    background: #FFEFD5;
+    form{
+        .logo-form{
+            img{
+                width: 120px;
+                height: 49px;
+            }
+        }
+        h2{
+            text-align: center;
+            font-size: 26px;
+        }
+        .flex-form{
+            display: flex;
+            flex-direction: column;
+            input{
+                margin-bottom: 10px;
+                height: 35px;
+                width: 100%;
+                color: #9c9a9a;
+                border: 2px solid #272727;
+                border-radius: 3px;
+                padding: 0 15px;
+                background: none;
+                &:first-child{
+                    margin-top: 20px;
+                }
+                &:focus{
+                    outline: none;
+                    border-color: $accent-color;
+                }
+                &.error{
+                    border-color: #f00;
+                }
+            }
+            .btn{
+                margin-top: 35px;
+                button{}
+            }
+        }
+    }
+    .flex-form-logo{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
+.persd-sogl{
+    margin: 15px 10px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 16px;
+    a{
+        color: $link-color;
+    }
+}
+.mfp-bg{
+    background: $accent-color !important;
+    opacity: 1;
+}
 
 
 
 
-
-
+.col-two{
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 2em;
+    -moz-column-gap: 2em;
+    column-gap: 2em;
+    -webkit-column-width: 250px;
+    -moz-column-width: 250px;
+    column-width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: number;
+}
 
 
 

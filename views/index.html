@@ -13,20 +13,34 @@
 	<link rel="shortcut icon"  href="favicon.ico">
 </head>
 <body>
-    
-    <div id="main">
+     <div id="main">
+        
         <header>
             <div class="container flex flex-header">
-                <div class="logo flex"><a href=""><img src="img/logo.svg" alt=""></a><span>Грузоперевозки</span></div>
+                <div class="logo flex"><a href="/"><img src="img/logo.svg" alt=""></a><span>Грузоперевозки</span></div>
                 <div class="call-out">
                     <ul class="flex">
-                        <li><a href=""><img src="img/call_btn.svg" alt=""></a></li>
-                        <li><a href=""><img src="img/menu_btn.svg" alt=""></a></li>
+                        <li><a class="popup-with-form" href="#window-modal-id"><img src="img/call_btn.svg" alt=""></a></li>
+                        <li id="mmenu"><img src="img/menu_btn.svg" alt=""></li>
                     </ul>
                 </div>
             </div>
+            <div class="over">
+                <nav id="menuha" class="menuha">
+                    <ul class="mmenu">
+                        <li><a class="ancLinks" href="#oneScreen">Главная</a></li>
+                        <li><a class="ancLinks" href="#twoScreen">Цены</a></li>
+                        <li><a class="ancLinks" href="#twoScreen">Преимущества</a></li>
+                        <li><a class="ancLinks" href="#threeScreen">Галерея</a></li>
+                        <li><a class="ancLinks" href="#fourScreen">Отзывы</a></li>
+                        <li><a class="ancLinks" href="#fiveScreen">Партнеры</a></li>
+                    </ul>
+                    <div id="btn-no-menu"></div>
+                </nav>
+            </div>
         </header>
-        <section id="one-screen" class="banner">
+        <section id="oneScreen" class="banner">
+            <div class="no-effects" id="fig-one"></div>
             <div class="container specpred">
                 <div class="ttl">
                     <h1>Проверенный грузоперевозчик <br>по Ростову от 449р/час!</h1>
@@ -38,9 +52,10 @@
                     Всегда готов договориться. 
                     Частный водитель.</p>
                 </div>
-                <div class="btn"><button>Получить скидку 10%</button></div>
+                <div class="btn"><a class="popup-with-form" href="#window-modal-id"><button>Получить скидку 10%</button></a></div>
             </div>
             <div class="car"><img src="img/gasel.png" alt=""></div>
+            <div class="no-effects" id="fig-two"></div>
         </section>
         <section id="twoScreen" class="price-services">
             <div class="container flex flex-price-services mt-ttl">
@@ -99,7 +114,7 @@
                         </table>
                     </div>
                 </div>
-                <div class="col-pol">
+                <div class="col-pol mt-media-advantage">
                     <div class="ttl">
                         <h2>Вывезем 2 тонны мусора всего за 1470 рублей!</h2>
                     </div>
@@ -109,15 +124,13 @@
                                 <img src="img/delivery-schedule.svg" alt=""></span><span class="txt">Работаем быстро и аккуратно</span>
                             </li>
                             <li><span class="img">
-                                <img src="img/doorstep.svg" alt=""></span><span class="txt">Упакуем мусор в мешки
-</span>
+                                <img src="img/doorstep.svg" alt=""></span><span class="txt">Упакуем мусор в мешки</span>
                             </li>
                             <li><span class="img">
                                 <img src="img/parcel.svg" alt=""></span><span class="txt">Спустим мусор с этажа</span>
                             </li>
                             <li><span class="img">
-                                <img src="img/forklift.svg" alt=""></span><span class="txt">Вывезем мусор насыпью
-</span>
+                                <img src="img/forklift.svg" alt=""></span><span class="txt">Вывезем мусор насыпью</span>
                             </li>
                             <li><span class="img">
                                 <img src="img/delivery-man.svg" alt=""></span><span class="txt">Работаем с грузчиками и без</span>
@@ -125,64 +138,41 @@
                         </ul>
                     </div>
                     <div class="number-block">
-                        <div class="caps">Позвоните <a href="tel:8(904) 344-69-99">8(904) 344-69-99</a></div>
+                        <div class="caps">Позвоните <a href="tel:8(904) 342-59-99">8(904) 342-59-99</a></div>
                         <div class="prisk">мы везем 2 тонны мусора в течение 1 часа</div>
                     </div>
                 </div>
             </div>
+            <div class="no-effects" id="fig-three"></div>
         </section>
         <section id="threeScreen" class="gallery mt-ttl">
-            <div class="gallery-slick">
-                <div class="item">
-                    <a href="" title="Into The Blue">
-                        <img src="img/preview.png">
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="" title="Into The Blue">
-                        <img src="img/preview.png">
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="" title="Into The Blue">
-                        <img src="img/preview.png">
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="" title="Into The Blue">
-                        <img src="img/preview.png">
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="" title="Into The Blue">
-                        <img src="img/preview.png">
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="" title="Into The Blue">
-                        <img src="img/preview.png">
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="" title="Into The Blue">
-                        <img src="img/preview.png">
-                    </a>
-                </div>
-                <div class="item">
-                    <a href="" title="Into The Blue">
-                        <img src="img/preview.png">
-                    </a>
-                </div>
+            <div class="gallery-slick zoom-gallery">
+               <div class="item"><a href="img/img1.jpg"><img src="img/img1.jpg" alt=""></a></div>
+               <div class="item"><a href="img/img2.jpg"><img src="img/img2.jpg" alt=""></a></div>
+               <div class="item"><a href="img/img3.jpg"><img src="img/img3.jpg" alt=""></a></div>
+               <div class="item"><a href="img/img4.jpg"><img src="img/img4.jpg" alt=""></a></div>
+               <div class="item"><a href="img/img5.jpg"><img src="img/img5.jpg" alt=""></a></div>
+               <div class="item"><a href="img/img6.jpg"><img src="img/img6.jpg" alt=""></a></div>
+               <div class="item"><a href="img/img7.jpg"><img src="img/img7.jpg" alt=""></a></div>
+               <div class="item"><a href="img/img8.jpg"><img src="img/img8.jpg" alt=""></a></div>
+               <div class="item"><a href="img/img9.jpg"><img src="img/img9.jpg" alt=""></a></div>
+               <div class="item"><a href="img/img10.jpg"><img src="img/img10.jpg" alt=""></a></div>
+               <div class="item"><a href="img/img11.jpg"><img src="img/img11.jpg" alt=""></a></div>
+               <div class="item"><a href="img/img12.jpg"><img src="img/img12.jpg" alt=""></a></div>
+               <div class="item"><a href="img/img13.jpg"><img src="img/img13.jpg" alt=""></a></div>
+               <div class="item"><a href="img/img14.jpg"><img src="img/img14.jpg" alt=""></a></div>
+               <div class="item"><a href="img/img15.jpg"><img src="img/img15.jpg" alt=""></a></div>
             </div>
         </section>
         <section id="fourScreen" class="uslugi-review mt-ttl">
+            <div class="no-effects" id="fig-four"></div>
             <div class="container flex flex-uslugi-review">
                 <div class="col-pol">
                     <div class="ttl">
                         <h2>Наши услуги</h2>
                     </div>
                     <div class="usl mt-block">
-                        <ul>
+                        <ul id="two-block-col">
                             <li>Перевозки грузов</li>
                             <li>Услуга грузчиков</li>
                             <li>Квартирный переезд</li>
@@ -195,12 +185,12 @@
                     </div>
                     <div class="stock">
                         <p>Не нашли нужную услугу?</p>
-                        <p>Позвоните <strong>8(904) 344-69-99</strong> и мы вам поможем!</p>
+                        <p>Позвоните <strong>8(904) 342-59-99</strong> и мы вам поможем!</p>
                         <p>А еще получите скидку при заказе с сайта <strong>10%</strong></p>
-                        <div class="btn"><button>Заказать машину</button></div>
+                        <div class="btn"><a class="popup-with-form" href="#window-modal-id"><button>Заказать машину</button></a></div>
                     </div>
                 </div>
-                <div class="col-pol">
+                <div class="col-pol mt-media-advantage">
                     <div class="ttl">
                         <h2>Отзывы</h2>
                     </div>
@@ -237,7 +227,7 @@
             <div class="ttl">
                 <h2>Партнеры</h2>
             </div>
-            <div class="flex oplet mt-block">
+            <div class="flex flex-partners oplet mt-block">
                 <div class="item"><img src="img/sber.png" alt=""></div>
                 <div class="item"><img src="img/megamag.png" alt=""></div>
                 <div class="item"><img src="img/rgd.png" alt=""></div>
@@ -250,43 +240,40 @@
                 <p>*Так же мы производим расчет любым удобным для вас методом оплаты:</p>
                 <p>наличный расчет, оплата картой, безналичный расчет, операции через Сбербанк и Райффайзен банк</p>
             </div>
+            <div class="no-effects" id="fig-five"></div>
         </section>
+        </div>
         <footer>
             <div class="container">
                <div class="flex footer-flex">
                     <div class="logo flex"><img src="img/logo_w.svg" alt=""><span>Грузоперевозки</span></div>
                     <div class="phone flex">
                         <div class="ico"><img src="img/phone.svg" alt=""></div>
-                        <a href="tel:8(904) 344-69-99">8(904) 344-69-99</a>
+                        <a href="tel:8(904) 342-59-99">8(904) 342-59-99</a>
                     </div>
                 </div>
                 <div class="offer">
-                    <p>Расчет и цены, представленные на сайте не являются публичной афертой и представлены в ознакомительных целях. Итоговая стоимость зависит от количества километров в пути, объема груза и времени, затраченного на грузоперевозку. Подробности по телефону 8(904) 344-69-99</p>
+                    <p>Расчет и цены, представленные на сайте не являются публичной афертой и представлены в ознакомительных целях. Итоговая стоимость зависит от количества километров в пути, объема груза и времени, затраченного на грузоперевозку. Подробности по телефону 8(904) 342-59-99</p>
                     <p>Все права защищены. Сайт подготовлен <a target="_blank" href="http://ewal-web.ru">ewal-web.ru</a></p>
                     <p>Copyright © 2019г</p>
                 </div>
             </div>
         </footer>
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    </div>
 
-    
+    <div class="window-modal mfp-hide white-popup-block" id="window-modal-id">
+        <form>
+            <div class="flex-form-logo"><div class="logo-form"><img src="img/logo.svg" alt=""></div>
+            <h2>Заказать машину</h2></div>
+             <div class="flex-form">
+                    <input type="text" id="name" name="name" placeholder="Ваше имя" >
+                    <input type="text" name="phone" placeholder="Ваш телефон" >
+                    <div class="btn result"><button id="modal-button">Отправить</button></div>
+            </div>
+            <p class="persd-sogl black-pd">Нажимая кнопку «Отправить» вы соглашаетесь с <a class="soglasie" target="_blank" href="soglasie.html">Пользовательским соглашением</a>  и <a href="persdata.html" target="_blank">Положением о Персональных данных</a>
+            </p>
+        </form>
+    </div>
     
     <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
           crossorigin="anonymous"></script>
